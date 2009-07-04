@@ -518,7 +518,7 @@ function recaptcha_contact_form_plugin_settings() {
 	<p><b>NOTE:</b> If you haven't already got reCAPTCHA public and private keys, you can get them by visiting the <a href="http://recaptcha.net/whyrecaptcha.html">reCAPTCHA website</a>.</p>
 
 	<h3>Usage</h3>
-	<p>Simply use the shortcode <b>[recaptcha_form]</b> in any of your posts or pages.  All emails submitted from the reCAPTCHA forms will be sent to the blog administrator's email address (<a href="mailto:<?php echo get_option('admin_email'); ?>"><?php echo get_option('admin_email'); ?></a>).</p>
+	<p>Simply use the shortcode <b>[wp_recaptcha_form]</b> in any of your posts or pages.  All emails submitted from the reCAPTCHA forms will be sent to the blog administrator's email address (<a href="mailto:<?php echo get_option('admin_email'); ?>"><?php echo get_option('admin_email'); ?></a>).</p>
 
 	<h3>Did You Find This Plugin Useful?</h3>
 	<p>Stay up to date with the latest plugin developments by visiting the <a href="http://plugins.gattdesign.co.uk">Gatt Design Plugins website</a>.</p>
@@ -572,9 +572,9 @@ function recaptcha_contact_form_short_code() {
 				$recaptcha_contact_form_code .= '<noscript>&nbsp;</noscript>' . "\n";
 				$recaptcha_contact_form_code .= '<form method="post" action="' . str_replace( '%7E', '~', $_SERVER['REQUEST_URI']) . '">' . "\n";
 				$recaptcha_contact_form_code .= '<fieldset style="border: 0px; margin: 0px; padding: 0px;">' . "\n";
-				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_name'] . '<br /><label for="recaptcha_form_name"><input type="text" name="recaptcha_form_name" value="" style="width: 300px;" /></label></p>' . "\n";
-				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_email'] . '<br /><label for="recaptcha_form_email"><input type="text" name="recaptcha_form_email" value="" style="width: 300px;" /></label></p>' . "\n";
-				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_message'] . '<br /><label for="recaptcha_form_message"><textarea name="recaptcha_form_message" rows="10" cols="20" style="width: 450px;"></textarea></label></p>' . "\n";
+				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_name'] . '<br /><label for="wp_recaptcha_form_name"><input type="text" name="wp_recaptcha_form_name" value="" style="width: 300px;" /></label></p>' . "\n";
+				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_email'] . '<br /><label for="wp_recaptcha_form_email"><input type="text" name="wp_recaptcha_form_email" value="" style="width: 300px;" /></label></p>' . "\n";
+				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_message'] . '<br /><label for="wp_recaptcha_form_message"><textarea name="wp_recaptcha_form_message" rows="10" cols="20" style="width: 450px;"></textarea></label></p>' . "\n";
 				$recaptcha_contact_form_code .= '<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=' . $recaptcha_contact_form_pubkey_checka . '"></script>' . "\n";
 				$recaptcha_contact_form_code .= '<noscript>' . "\n";
 				$recaptcha_contact_form_code .= '<div id="recaptcha_contact_form_plugin">' . "\n";
@@ -598,10 +598,10 @@ function recaptcha_contact_form_short_code() {
 				$recaptcha_contact_form_code .= '<!-- end of recaptcha form -->' . "\n";
 			// recaptcha challenge passed
 			} else {
-				$recaptcha_contact_form_name_field = $_POST['recaptcha_form_name'];
-				$recaptcha_contact_form_email_field = $_POST['recaptcha_form_email'];
+				$recaptcha_contact_form_name_field = $_POST['wp_recaptcha_form_name'];
+				$recaptcha_contact_form_email_field = $_POST['wp_recaptcha_form_email'];
 				$recaptcha_contact_form_email_field = sanitize_email($recaptcha_contact_form_email_field);
-				$recaptcha_contact_form_message_field = $_POST['recaptcha_form_message'];
+				$recaptcha_contact_form_message_field = $_POST['wp_recaptcha_form_message'];
 				
 				// some fields are empty, show error message and contact form
 				if(($recaptcha_contact_form_name_field == null) || ($recaptcha_contact_form_email_field == null) || ($recaptcha_contact_form_message_field == null)) {
@@ -617,9 +617,9 @@ function recaptcha_contact_form_short_code() {
 					$recaptcha_contact_form_code .= '<noscript>&nbsp;</noscript>' . "\n";
 					$recaptcha_contact_form_code .= '<form method="post" action="' . str_replace( '%7E', '~', $_SERVER['REQUEST_URI']) . '">' . "\n";
 					$recaptcha_contact_form_code .= '<fieldset style="border: 0px; margin: 0px; padding: 0px;">' . "\n";
-					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_name'] . '<br /><label for="recaptcha_form_name"><input type="text" name="recaptcha_form_name" value="" style="width: 300px;" /></label></p>' . "\n";
-					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_email'] . '<br /><label for="recaptcha_form_email"><input type="text" name="recaptcha_form_email" value="" style="width: 300px;" /></label></p>' . "\n";
-					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_message'] . '<br /><label for="recaptcha_form_message"><textarea name="recaptcha_form_message" rows="10" cols="20" style="width: 450px;"></textarea></label></p>' . "\n";
+					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_name'] . '<br /><label for="wp_recaptcha_form_name"><input type="text" name="wp_recaptcha_form_name" value="" style="width: 300px;" /></label></p>' . "\n";
+					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_email'] . '<br /><label for="wp_recaptcha_form_email"><input type="text" name="wp_recaptcha_form_email" value="" style="width: 300px;" /></label></p>' . "\n";
+					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_message'] . '<br /><label for="wp_recaptcha_form_message"><textarea name="wp_recaptcha_form_message" rows="10" cols="20" style="width: 450px;"></textarea></label></p>' . "\n";
 					$recaptcha_contact_form_code .= '<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=' . $recaptcha_contact_form_pubkey_checka . '"></script>' . "\n";
 					$recaptcha_contact_form_code .= '<noscript>' . "\n";
 					$recaptcha_contact_form_code .= '<div id="recaptcha_contact_form_plugin">' . "\n";
@@ -677,9 +677,9 @@ function recaptcha_contact_form_short_code() {
 			$recaptcha_contact_form_code .= '<noscript>&nbsp;</noscript>' . "\n";
 			$recaptcha_contact_form_code .= '<form method="post" action="' . str_replace( '%7E', '~', $_SERVER['REQUEST_URI']) . '">' . "\n";
 			$recaptcha_contact_form_code .= '<fieldset style="border: 0px; margin: 0px; padding: 0px;">' . "\n";
-			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_name'] . '<br /><label for="recaptcha_form_name"><input type="text" name="recaptcha_form_name" value="" style="width: 300px;" /></label></p>' . "\n";
-			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_email'] . '<br /><label for="recaptcha_form_email"><input type="text" name="recaptcha_form_email" value="" style="width: 300px;" /></label></p>' . "\n";
-			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_message'] . '<br /><label for="recaptcha_form_message"><textarea name="recaptcha_form_message" rows="10" cols="20" style="width: 450px;"></textarea></label></p>' . "\n";
+			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_name'] . '<br /><label for="wp_recaptcha_form_name"><input type="text" name="wp_recaptcha_form_name" value="" style="width: 300px;" /></label></p>' . "\n";
+			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_email'] . '<br /><label for="wp_recaptcha_form_email"><input type="text" name="wp_recaptcha_form_email" value="" style="width: 300px;" /></label></p>' . "\n";
+			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_message'] . '<br /><label for="wp_recaptcha_form_message"><textarea name="wp_recaptcha_form_message" rows="10" cols="20" style="width: 450px;"></textarea></label></p>' . "\n";
 			$recaptcha_contact_form_code .= '<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=' . $recaptcha_contact_form_pubkey_checka . '"></script>' . "\n";
 			$recaptcha_contact_form_code .= '<noscript>' . "\n";
 			$recaptcha_contact_form_code .= '<div id="recaptcha_contact_form_plugin">' . "\n";
@@ -708,6 +708,6 @@ function recaptcha_contact_form_short_code() {
 }
 
 // create the shortcode
-add_shortcode('recaptcha_form', 'recaptcha_contact_form_short_code');
+add_shortcode('wp_recaptcha_form', 'recaptcha_contact_form_short_code');
 
 ?>

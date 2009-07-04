@@ -4,7 +4,7 @@ Donate link: http://plugins.gattdesign.co.uk/
 Tags: recaptcha form, contact, form, contact form, recaptcha, antispam, captcha
 Requires at least: 2.7.1
 Tested up to: 2.8
-Stable tag: 1.1
+Stable tag: 0.1
 
 This plugin enables you to use a reCAPTCHA contact form on your blog.
 
@@ -13,7 +13,7 @@ This plugin enables you to use a reCAPTCHA contact form on your blog.
 A simple plugin for your WordPress blog that enables you to have a contact form with the reCAPTCHA challenge system.
 
 All you have to do is install and activate the plugin, enter your reCAPTCHA keys in the Admin section, and place the 
-shortcode `[recaptcha_form]` on any page or post within your blog, that's it!
+shortcode `[wp_recaptcha_form]` on any page or post within your blog, that's it!
 
 You can optionally specify a theme for the reCAPTCHA box (Red, Blackglass, Clean and White), and you can also specify 
 a different language (Dutch, French, German, Portuguese, Russian, Spanish and Turkish).
