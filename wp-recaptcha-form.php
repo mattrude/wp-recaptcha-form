@@ -2,12 +2,13 @@
 /*
 Plugin Name: wp reCAPTCHA Form
 Plugin URI: http://github.com/mattrude/wp-recaptcha-form
-Version: 0.1
+Version: 1.0
 Author: Matt Rude
 Author URI: http://www.mattrude.com
 Description: 
 
- Copyright 2009 Gatt Design  (email : plugins@gattdesign.co.uk)
+ Copyright 2009 Matt Rude (email : wordpress@mattrude.com),
+                Gatt Design  (email : plugins@gattdesign.co.uk)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -153,13 +154,14 @@ function recaptcha_contact_form_plugin_language_checka($recaptcha_contact_form_p
 
 // returns current language, and form fields text as array
 function recaptcha_contact_form_plugin_current_language($recaptcha_contact_form_plugin_current_language_parameter) {
-	$recaptcha_contact_form_plugin_current_language_postback = array('language' => '', 'client_name' => '', 'client_email' => '', 'client_message' => '', 'submit_button' => '', 'invalid_recaptcha' => '', 'fill_in_fields' => '', 'message_sent' => '', 'message_failed' => '');
+	$recaptcha_contact_form_plugin_current_language_postback = array('language' => '', 'client_name' => '', 'client_email' => '', 'client_subject' => '', 'client_message' => '', 'submit_button' => '', 'invalid_recaptcha' => '', 'fill_in_fields' => '', 'message_sent' => '', 'message_failed' => '');
 	
 	switch($recaptcha_contact_form_plugin_current_language_parameter) {
 		case 'gd_recap_language_english':
 			$recaptcha_contact_form_plugin_current_language_postback['language'] = 'en';
 			$recaptcha_contact_form_plugin_current_language_postback['client_name'] = 'Your Name:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_email'] = 'Your Email Address:';
+			$recaptcha_contact_form_plugin_current_language_postback['client_subject'] = 'Your Subject:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_message'] = 'Your Message:';
 			$recaptcha_contact_form_plugin_current_language_postback['submit_button'] = 'Submit';
 			$recaptcha_contact_form_plugin_current_language_postback['invalid_recaptcha'] = 'Invalid reCAPTCHA phrase - please try again.';
@@ -173,6 +175,7 @@ function recaptcha_contact_form_plugin_current_language($recaptcha_contact_form_
 			$recaptcha_contact_form_plugin_current_language_postback['language'] = 'nl';
 			$recaptcha_contact_form_plugin_current_language_postback['client_name'] = 'Uw Naam:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_email'] = 'Uw Emailadres:';
+			$recaptcha_contact_form_plugin_current_language_postback['client_subject'] = '??????????';
 			$recaptcha_contact_form_plugin_current_language_postback['client_message'] = 'Uw Bericht:';
 			$recaptcha_contact_form_plugin_current_language_postback['submit_button'] = 'Verstuur';
 			$recaptcha_contact_form_plugin_current_language_postback['invalid_recaptcha'] = 'Incorrecte waarden voor reCAPTCHA.  Probeer het opnieuw.';
@@ -186,6 +189,7 @@ function recaptcha_contact_form_plugin_current_language($recaptcha_contact_form_
 			$recaptcha_contact_form_plugin_current_language_postback['language'] = 'fr';
 			$recaptcha_contact_form_plugin_current_language_postback['client_name'] = 'Votre Nom:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_email'] = 'Votre Email:';
+			$recaptcha_contact_form_plugin_current_language_postback['client_subject'] = '?????????';
 			$recaptcha_contact_form_plugin_current_language_postback['client_message'] = 'Votre Message:';
 			$recaptcha_contact_form_plugin_current_language_postback['submit_button'] = 'Envoyer';
 			$recaptcha_contact_form_plugin_current_language_postback['invalid_recaptcha'] = 'Valeur incorrecte pour reCAPTCHA.  S\'il-vous-pla&icirc;t, essayez de nouveau.';
@@ -199,6 +203,7 @@ function recaptcha_contact_form_plugin_current_language($recaptcha_contact_form_
 			$recaptcha_contact_form_plugin_current_language_postback['language'] = 'de';
 			$recaptcha_contact_form_plugin_current_language_postback['client_name'] = 'Ihr Name:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_email'] = 'Ihre Email-Adresse:';
+			$recaptcha_contact_form_plugin_current_language_postback['client_subject'] = '??????????';
 			$recaptcha_contact_form_plugin_current_language_postback['client_message'] = 'Ihre Nachricht:';
 			$recaptcha_contact_form_plugin_current_language_postback['submit_button'] = '&Uuml;bermitteln';
 			$recaptcha_contact_form_plugin_current_language_postback['invalid_recaptcha'] = 'Falscher reCAPTCHA Satz - Bitte versuchen Sie es erneut.';
@@ -212,6 +217,7 @@ function recaptcha_contact_form_plugin_current_language($recaptcha_contact_form_
 			$recaptcha_contact_form_plugin_current_language_postback['language'] = 'pt';
 			$recaptcha_contact_form_plugin_current_language_postback['client_name'] = 'O seu Nome:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_email'] = 'O seu Endere&ccedil;o de Email:';
+			$recaptcha_contact_form_plugin_current_language_postback['client_subject'] = '??????????';
 			$recaptcha_contact_form_plugin_current_language_postback['client_message'] = 'A Sua Mensagem:';
 			$recaptcha_contact_form_plugin_current_language_postback['submit_button'] = 'Enviar';
 			$recaptcha_contact_form_plugin_current_language_postback['invalid_recaptcha'] = 'A frase reCAPTCHA inválida - por favor tente novamente.';
@@ -225,6 +231,7 @@ function recaptcha_contact_form_plugin_current_language($recaptcha_contact_form_
 			$recaptcha_contact_form_plugin_current_language_postback['language'] = 'ru';
 			$recaptcha_contact_form_plugin_current_language_postback['client_name'] = '???? ???:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_email'] = '??? ????? ??????????? ?????:';
+			$recaptcha_contact_form_plugin_current_language_postback['client_subject'] = '??? ????? ??????????? ?????:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_message'] = '???? ?????????:';
 			$recaptcha_contact_form_plugin_current_language_postback['submit_button'] = '?????????';
 			$recaptcha_contact_form_plugin_current_language_postback['invalid_recaptcha'] = '???????????? reCAPTCHA ????? - ?????????? ?????????? ??? ???.';
@@ -238,6 +245,7 @@ function recaptcha_contact_form_plugin_current_language($recaptcha_contact_form_
 			$recaptcha_contact_form_plugin_current_language_postback['language'] = 'es';
 			$recaptcha_contact_form_plugin_current_language_postback['client_name'] = 'Tu Nombre:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_email'] = 'Tu Direcci&oacute;n De Email:';
+			$recaptcha_contact_form_plugin_current_language_postback['client_subject'] = '??? ????? ??????????? ?????:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_message'] = 'Tu Mensaje:';
 			$recaptcha_contact_form_plugin_current_language_postback['submit_button'] = 'Enviar';
 			$recaptcha_contact_form_plugin_current_language_postback['invalid_recaptcha'] = 'La frase de reCAPTCHA es incorrecta. Por favor, int&eacute;ntelo de nuevo.';
@@ -251,6 +259,7 @@ function recaptcha_contact_form_plugin_current_language($recaptcha_contact_form_
 			$recaptcha_contact_form_plugin_current_language_postback['language'] = 'tr';
 			$recaptcha_contact_form_plugin_current_language_postback['client_name'] = 'Isminiz:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_email'] = 'Email Adresiniz:';
+			$recaptcha_contact_form_plugin_current_language_postback['client_subject'] = '??? ????? ??????????? ?????:';
 			$recaptcha_contact_form_plugin_current_language_postback['client_message'] = 'Mesaj&iota;n&iota;z:';
 			$recaptcha_contact_form_plugin_current_language_postback['submit_button'] = 'G&ouml;nder';
 			$recaptcha_contact_form_plugin_current_language_postback['invalid_recaptcha'] = 'L&uuml;tfen reCAPTCHA (resim)/g&ouml;rd&uuml;&#287;&uuml;n&uuml;z karakterleri aynen giriniz.';
@@ -574,6 +583,7 @@ function recaptcha_contact_form_short_code() {
 				$recaptcha_contact_form_code .= '<fieldset style="border: 0px; margin: 0px; padding: 0px;">' . "\n";
 				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_name'] . '<br /><label for="wp_recaptcha_form_name"><input type="text" name="wp_recaptcha_form_name" value="" style="width: 300px;" /></label></p>' . "\n";
 				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_email'] . '<br /><label for="wp_recaptcha_form_email"><input type="text" name="wp_recaptcha_form_email" value="" style="width: 300px;" /></label></p>' . "\n";
+				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_subject'] . '<br /><label for="wp_recaptcha_form_subject"><input type="text" name="wp_recaptcha_form_subject" value="" style="width: 300px;" /></label></p>' . "\n";
 				$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_message'] . '<br /><label for="wp_recaptcha_form_message"><textarea name="wp_recaptcha_form_message" rows="10" cols="20" style="width: 450px;"></textarea></label></p>' . "\n";
 				$recaptcha_contact_form_code .= '<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=' . $recaptcha_contact_form_pubkey_checka . '"></script>' . "\n";
 				$recaptcha_contact_form_code .= '<noscript>' . "\n";
@@ -601,6 +611,7 @@ function recaptcha_contact_form_short_code() {
 				$recaptcha_contact_form_name_field = $_POST['wp_recaptcha_form_name'];
 				$recaptcha_contact_form_email_field = $_POST['wp_recaptcha_form_email'];
 				$recaptcha_contact_form_email_field = sanitize_email($recaptcha_contact_form_email_field);
+				$recaptcha_contact_form_subject_field = $_POST['wp_recaptcha_form_subject'];
 				$recaptcha_contact_form_message_field = $_POST['wp_recaptcha_form_message'];
 				
 				// some fields are empty, show error message and contact form
@@ -619,6 +630,7 @@ function recaptcha_contact_form_short_code() {
 					$recaptcha_contact_form_code .= '<fieldset style="border: 0px; margin: 0px; padding: 0px;">' . "\n";
 					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_name'] . '<br /><label for="wp_recaptcha_form_name"><input type="text" name="wp_recaptcha_form_name" value="" style="width: 300px;" /></label></p>' . "\n";
 					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_email'] . '<br /><label for="wp_recaptcha_form_email"><input type="text" name="wp_recaptcha_form_email" value="" style="width: 300px;" /></label></p>' . "\n";
+					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_subject'] . '<br /><label for="wp_recaptcha_form_subject"><input type="text" name="wp_recaptcha_form_subject" value="" style="width: 300px;" /></label></p>' . "\n";
 					$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_message'] . '<br /><label for="wp_recaptcha_form_message"><textarea name="wp_recaptcha_form_message" rows="10" cols="20" style="width: 450px;"></textarea></label></p>' . "\n";
 					$recaptcha_contact_form_code .= '<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=' . $recaptcha_contact_form_pubkey_checka . '"></script>' . "\n";
 					$recaptcha_contact_form_code .= '<noscript>' . "\n";
@@ -646,9 +658,11 @@ function recaptcha_contact_form_short_code() {
 					// construct mail 
 					$recaptcha_contact_form_email_sender = 'From: ' . $recaptcha_contact_form_name_field . ' <' . $recaptcha_contact_form_email_field . '>';
 					$recaptcha_contact_form_email_receiver = get_option('blogname') . ' <' . get_option('admin_email') . '>';
-					$recaptcha_contact_form_email_body = 'You have received a message from ' . get_option('blogname') . '.  Message details are as follows:' . "\n\n";
+					$recaptcha_contact_form_email_body = 'You have received a message from the contact form on ' . get_option('blogname') . '.  Message details are as follows:' . "\n\n";
 					$recaptcha_contact_form_email_body .= 'Date and Time: ' . date("l jS F Y H:i:s") . "\n\n";
 					$recaptcha_contact_form_email_body .= 'From: ' . $recaptcha_contact_form_name_field . "\n";
+					$recaptcha_contact_form_email_body .= 'Email Address: ' . $recaptcha_contact_form_email_field . "\n";
+					$recaptcha_contact_form_email_body .= 'Subject: ' . $recaptcha_contact_form_subject_field . "\n";
 					$recaptcha_contact_form_email_body .= 'Message: ' . $recaptcha_contact_form_message_field . "\n\n";
 					$recaptcha_contact_form_email_body .= 'IP address: ' . $_SERVER['REMOTE_ADDR'] . ' (' . gethostbyaddr($_SERVER['REMOTE_ADDR']) . ')' . "\n\n";
 					
@@ -679,6 +693,7 @@ function recaptcha_contact_form_short_code() {
 			$recaptcha_contact_form_code .= '<fieldset style="border: 0px; margin: 0px; padding: 0px;">' . "\n";
 			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_name'] . '<br /><label for="wp_recaptcha_form_name"><input type="text" name="wp_recaptcha_form_name" value="" style="width: 300px;" /></label></p>' . "\n";
 			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_email'] . '<br /><label for="wp_recaptcha_form_email"><input type="text" name="wp_recaptcha_form_email" value="" style="width: 300px;" /></label></p>' . "\n";
+			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_subject'] . '<br /><label for="wp_recaptcha_form_subject"><input type="text" name="wp_recaptcha_form_subject" value="" style="width: 300px;" /></label></p>' . "\n";
 			$recaptcha_contact_form_code .= '<p style="text-align: left;">' . $recaptcha_contact_form_language_fields['client_message'] . '<br /><label for="wp_recaptcha_form_message"><textarea name="wp_recaptcha_form_message" rows="10" cols="20" style="width: 450px;"></textarea></label></p>' . "\n";
 			$recaptcha_contact_form_code .= '<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=' . $recaptcha_contact_form_pubkey_checka . '"></script>' . "\n";
 			$recaptcha_contact_form_code .= '<noscript>' . "\n";

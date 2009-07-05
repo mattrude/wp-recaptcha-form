@@ -1,12 +1,13 @@
-=== reCAPTCHA Form ===
-Contributors: gattdesign
-Donate link: http://plugins.gattdesign.co.uk/
+=== wp reCAPTCHA Form ===
+Contributors: Matt Rude,  gattdesign
+Donate link: http://www.mattrude.com/
 Tags: recaptcha form, contact, form, contact form, recaptcha, antispam, captcha
 Requires at least: 2.7.1
 Tested up to: 2.8
-Stable tag: 0.1
+Stable tag: 1.0
 
-This plugin enables you to use a reCAPTCHA contact form on your blog.
+A simple plugin for your WordPress blog that enables you to have a contact
+form with the reCAPTCHA challenge system.
 
 == Description ==
 
@@ -24,26 +25,17 @@ address.
 
 == Installation ==
 
-1. Upload the `gd-recaptcha` directory to the `/wp-content/plugins/` directory
+1. Upload the `wp-recaptcha-form` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Go to the `reCaptcha Form` Admin section and enter your reCAPTCHA private and public keys
-1. Use the shortcode `[recaptcha_form]` in any of your posts or pages
+1. Go to the `wp reCAPTCHA Form` Admin section and enter your reCAPTCHA private and public keys
+1. Use the shortcode `[wp_recaptcha_form]` in any of your posts or pages
 
 == ChangeLog ==
-
-= Version 1.1 =
-
-* Modified reCAPTCHA HTML form for W3C XHTML standards compliancy.
-* Added support for other reCAPTCHA box themes (Blackglass, Clean and White).
-* Added support for Dutch, French, German, Portuguese, Russian, Spanish and Turkish languages.
-
-= Version 1.0.1 =
-
-* Bug fix for WordPress installations that do not have any other plugins which use reCAPTCHA.
 
 = Version 1.0 =
 
 * First release.
+* Starting from reCAPTCHA Form version 1.1 by Gatt Design http://plugins.gattdesign.co.uk/
 
 == Frequently Asked Questions ==
 
