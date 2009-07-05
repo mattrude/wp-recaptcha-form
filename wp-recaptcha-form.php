@@ -7,7 +7,7 @@ Author: Matt Rude
 Author URI: http://www.mattrude.com
 Description: 
 
- Copyright 2009 Matt Rude (email : wordpress@mattrude.com),
+ Copyright 2009 Matt Rude (email : wordpress@mattrude.com)
                 Gatt Design  (email : plugins@gattdesign.co.uk)
 
     This program is free software; you can redistribute it and/or modify
