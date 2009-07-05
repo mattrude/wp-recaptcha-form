@@ -4,7 +4,7 @@ Donate link: http://www.mattrude.com/
 Tags: recaptcha form, contact, form, contact form, recaptcha, antispam, captcha
 Requires at least: 2.7.1
 Tested up to: 2.8
-Stable tag: 1.1-beta
+Stable tag: 1.0
 
 A simple plugin for your WordPress blog that enables you to have a contact
 form with the reCAPTCHA challenge system.

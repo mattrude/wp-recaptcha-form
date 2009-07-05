@@ -2,7 +2,7 @@
 /*
 Plugin Name: wp reCAPTCHA Form
 Plugin URI: http://github.com/mattrude/wp-recaptcha-form
-Version: 1.1-beta
+Version: 1.0
 Author: Matt Rude
 Author URI: http://www.mattrude.com
 Description: 
