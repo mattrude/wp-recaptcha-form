@@ -41,7 +41,7 @@ address.
 
 = Where Can I Use The reCAPTCHA Form? =
 
-You can use it in any post or page.  Simply insert the shortcode `[recaptcha_form]`
+You can use it in any post or page.  Simply insert the shortcode `[wp_recaptcha_form]`
 
 = I Don't Have Any reCAPTCHA Keys.  Where Can I Get Them From? =
 
