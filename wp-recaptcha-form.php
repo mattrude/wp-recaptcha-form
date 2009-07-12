@@ -5,7 +5,7 @@ Plugin URI: http://github.com/mattrude/wp-recaptcha-form
 Version: 1.0
 Author: Matt Rude
 Author URI: http://www.mattrude.com
-Description: 
+Description: A simple plugin for your WordPress blog that enables you to have a contact form with the reCAPTCHA challenge system. You must enter your <a href=http://www.recaptcha.org>reCAPTCHA</a> key on the <a href="options-general.php?page=wp-recaptcha-form/wp-recaptcha-form.php">Configuration Page</a> before you may use the reCAPTCHA form.
 
  Copyright 2009 Matt Rude (email : wordpress@mattrude.com)
                 Gatt Design  (email : plugins@gattdesign.co.uk)
@@ -529,6 +529,7 @@ function recaptcha_contact_form_plugin_settings() {
 	<h3>Usage</h3>
 	<p>Simply use the shortcode <b>[wp_recaptcha_form]</b> in any of your posts or pages.  All emails submitted from the reCAPTCHA forms will be sent to the blog administrator's email address (<a href="mailto:<?php echo get_option('admin_email'); ?>"><?php echo get_option('admin_email'); ?></a>).</p>
 
+<!--
 	<h3>Did You Find This Plugin Useful?</h3>
 	<p>Stay up to date with the latest plugin developments by visiting the <a href="http://plugins.gattdesign.co.uk">Gatt Design Plugins website</a>.</p>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -538,6 +539,7 @@ function recaptcha_contact_form_plugin_settings() {
 		<img alt="" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
 	</form>	
 	<p>We provide this plugin completely free of charge to the WordPress community, so feel free to drop us a line to say thank you or even make a small donation towards the continued development of this plugin! :-)</p>
+-->
 </div>
 <?php
 }
