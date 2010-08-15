@@ -1,80 +1,123 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+    <HEAD>
+        <META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <TITLE>wp-reCAPTCHA Form</TITLE>
+        <LINK href="common.css" rel="stylesheet" type="text/css">
+        <LINK rel="shortcut icon" href="images/favicon.ico">
+    </HEAD>
+    <BODY>
+        <A name="top"></A>
+        <DIV id="container">
+            <DIV id="header">
+            </DIV><!-- header -->
+            <DIV id="content">
+                <DIV id="leftColumn">
+                    <DIV id="navigation">
+                         <H5><A name="Index"></A>Index</H5>
+                             <UL>
+	                         <LI><A href="#Description" title="Description">Description</A></LI>
+	                         <LI><A href="#Download" title="Download">Download</A></LI>
+	                         <LI><A href="#Dependencies" title="Dependencies">Dependencies</A></LI>
+	                         <LI><A href="#Install" title="Install">Install</A></LI>
+	                         <LI><A href="#FAQ" title="FAQ">FAQ</A></LI>
+	                         <LI><A href="#License" title="License">License</A></LI>
+	                         <LI><A href="#Author" title="Author">Author</A></LI>
+                             </UL>
+                    </DIV><!-- navigation -->
+                </DIV><!-- leftColumn -->
+                <DIV id="rightColumn">
+		    <h1>wp-reCAPTCHA Form</h1> 
+		    <div class="description"> 
+		      <p>A simple plugin for your WordPress blog that enables you to have a contact form with the reCAPTCHA challenge system.</p>
+			
+		      <p>All you have to do is install and activate the plugin, enter your reCAPTCHA keys in the Admin section, and place the
+shortcode <strong>[wp_recaptcha_form]</strong> on any page or post within your blog, that's it!</p>
+			
+		      <p>You can optionally specify a theme for the reCAPTCHA box (Red, Blackglass, Clean and White), and you can also specify
+a different language.</p>
 
-	<title>mattrude/wp-recaptcha-form @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #442396;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #bbdc69; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #bbdc69; }
-    h3 { text-align: center; color: #bbdc69; }
-    a { color: #bbdc69; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
+		      <ul>
+		          <li>Dutch</li>
+		          <li>French</li>
+			  <li>German</li>
+			  <li>Portuguese</li>
+			  <li>Russian</li>
+			  <li>Spanish</li>
+			  <li>Turkish</li>
+		      </ul>
 
-<body>
-  <a href="http://github.com/mattrude/wp-recaptcha-form"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+		      <p>The form asks users for their name, email address and message.  The plugin will check that all fields have been filled
+in, and check the reCAPTCHA challenge has been validated before sending the email to the blog administrator's email
+address.</p>
+		      <p>If you would like to help translating this plugin, or you see a problem with the current translation, please <a href="http://mattrude.com/contact-me/" >contact me</a>.</p> 
+		    </div> 
+		
+		    <br>
+		    <a id=Download name=Download></a>
+		    <h2>Download</h2> 
+		    <p>The Current Version is 0.1 released on July, 19th 2009.</p>
+		    <ul> 
+			<li><a href="http://github.com/mattrude/wp-recaptcha-form/zipball/master">wp-reCAPTCHA form &#8211; Version 0.1</a></li> 
+</ul>
+		    <p>You can also clone the project with <a href="http://git-scm.com">Git</a> by running:
+		      <pre>$ git clone git://github.com/mattrude/wp-recaptcha-form.git</pre> 
+                      If your using git, make sure to hit the <a href="http://github.com/mattrude/wp-recaptcha-form">wp-reCAPTCHA Form's github page</a>.
+		    </p> 
 
-  <div id="container">
+		    <br>
+		    <a id=Dependencies name=Dependencies></a>
+		    <h2>Dependencies</h2> 
+		    <p><a href="http://wordpress.org/">WordPress</a> 2.8+</p> 
 
-    <div class="download">
-      <a href="http://github.com/mattrude/wp-recaptcha-form/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/mattrude/wp-recaptcha-form/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+		    <br>
+		    <a id=Install name=Install></a>
+		    <h2>Installing</h2> 
+		    <ol> 
+			<li>Download the latest version from the download page (<a href="http://github.com/mattrude/wp-recaptcha-form/zipball/master" rel="nofollow">http://github.com/mattrude/wp-recaptcha-form/zipball/master</a>)</li> 
+			<li>Extract the zip file and copy the folder "random-image-block" into the "wp-content/plugins/" directory in your WordPress installation.</li> 
+			<li>Activate the plugin from your Dashboard by going to Plugins -&gt; Installed page.</li> 
+		    </ol>
+		    <br>
+		    <a id=FAQ name=FAQ></a>
+		    <h2>Frequently Asked Questions</h2>
+		    <h3>Where Can I Use The reCAPTCHA Form?</h3>
+		    <ul><li>You can use it in any post or page.  Simply insert the shortcode <strong>[wp_recaptcha_form]</strong></li></ul>
 
-    <h1><a href="http://github.com/mattrude/wp-recaptcha-form">wp-recaptcha-form</a>
-      <span class="small">by <a href="http://github.com/mattrude">mattrude</a></span></h1>
+		    <h3>I Don't Have Any reCAPTCHA Keys.  Where Can I Get Them From?</h3>
+		    <ul><li>You can get them from the <a href="http://recaptcha.net/whyrecaptcha.html" rel="nofollow">reCAPTCHA website</a>.</li></ul>
 
-    <div class="description">
-      A reCAPTCHA secured wordpress contact form plugin
-    </div>
+		    <h3>Can I Use This Plugin With Other Plugins That Use reCAPTCHA?</h3>
+		    <ul><li>reCAPTCHA Form can be installed alongside any other plugins that use the reCAPTCHA challenge system, however you must
+make sure that whatever post/page you insert the reCAPTCHA Form shortcode on does not already display a reCAPTCHA
+form - this is because you cannot display more than one reCAPTCHA form on the same HTML page.</li></ul>
+                    
+		    <br>
+		    <a id=License name=License></a>
+		    <h2>License</h2> 
+		    <p>This plugin is licensed under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a>.  A copy of the license also comes with every copy download.</p> 
+                    <code>
+GNU GENERAL PUBLIC LICENSE<br />
+Version 2, June 1991<br />
+<br />
+Copyright (C) 1989, 1991 Free Software Foundation, Inc. <br />
+51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA <br />
+<br />
+Everyone is permitted to copy and distribute verbatim copies <br />
+of this license document, but changing it is not allowed. <br />
+		    </code>
 
-    <h2>Authors</h2>
-<p>Matt Rude (github@mattrude.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Matt Rude (m@mattrude.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/mattrude/wp-recaptcha-form/zipball/master">zip</a> or
-      <a href="http://github.com/mattrude/wp-recaptcha-form/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/mattrude/wp-recaptcha-form</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/mattrude/wp-recaptcha-form">mattrude/wp-recaptcha-form</a>
-    </div>
-
-  </div>
-
-  
-</body>
-</html>
+		    <br>
+		    <a id=Authors name=Authors></a>
+		    <h2>Authors</h2> 
+		    <p><a href="http://mattrude.com/">Matt Rude</a> &lt;<a href="mailto:m@mattrude.com">m@mattrude.com</a>&gt;<br/></p> 
+		    <br>
+                </DIV><!-- rightColumn -->
+                <DIV id="endContent"></DIV>
+            </DIV><!-- content -->
+            <DIV id="footer">Copyright &copy; 2009-2010 by <A href="http://mattrude.com/">Matt Rude</A>, All Rights Reserved. <br />
+		<small>last updated: 08-24-2010</small></DIV>
+        </DIV><!-- container -->
+    </BODY>
+</HTML>
