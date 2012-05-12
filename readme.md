@@ -44,10 +44,4 @@ reCAPTCHA Form can be installed alongside any other plugins that use the reCAPTC
 make sure that whatever post/page you insert the reCAPTCHA Form shortcode on does not already display a reCAPTCHA 
 form - this is because you cannot display more than one reCAPTCHA form on the same HTML page.
 
-## Translation Credits
-
-* German: [Ömür Yolcu Iskender](http://www.pandorascode.com/ "Ömür Yolcu Iskender"), [socreative.tv](http://socreative.tv/ "socreative.tv")
-* Russian: [socreative.tv](http://socreative.tv/ "socreative.tv")
-* Turkish: [Ömür Yolcu Iskender](http://www.pandorascode.com/ "Ömür Yolcu Iskender")
-
 ## Screenshots
